@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khách hàng - NovaCare Electronics</title>
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body class="shop-page customer-portal-page">
+    <header>
+        <h1>Không gian khách hàng</h1>
+        <p>Theo dõi bảo hành, đặt lịch sửa chữa và quản lý lịch sử mua hàng của bạn tại NovaCare. Giao diện sáng, tinh gọn giúp bạn kiểm soát mọi dịch vụ chỉ trong vài phút.</p>
+        <nav>
+            <a href="index.html">Tổng quan hệ thống</a>
+            <a href="#bao-hanh">Bảo hành</a>
+            <a href="#lich-sua">Lịch sửa chữa</a>
+            <a href="#mua-sam">Mua sắm</a>
+            <a href="#ho-tro">Hỗ trợ</a>
+        </nav>
+    </header>
+    <main>
+        <section id="bao-hanh" class="panel">
+            <h2>Trạng thái bảo hành</h2>
+            <div class="status-grid">
+                <div class="status-card">
+                    <h3>TV Samsung QLED 55"</h3>
+                    <span>Mã bảo hành: WR-2025-8831</span>
+                    <span>Ngày mua: 15/07/2024</span>
+                    <span>Hạn bảo hành: 15/07/2026</span>
+                    <span>Tình trạng: Đang nghiệm thu sửa chữa</span>
+                </div>
+                <div class="status-card">
+                    <h3>Máy lạnh Daikin Inverter</h3>
+                    <span>Mã bảo hành: WR-2025-6744</span>
+                    <span>Ngày mua: 03/02/2023</span>
+                    <span>Hạn bảo hành: 03/02/2026</span>
+                    <span>Tình trạng: Hoàn tất - chờ phản hồi</span>
+                </div>
+                <div class="status-card">
+                    <h3>Máy giặt LG Inverter</h3>
+                    <span>Mã bảo hành: WR-2025-8263</span>
+                    <span>Ngày mua: 21/09/2024</span>
+                    <span>Hạn bảo hành: 21/09/2026</span>
+                    <span>Tình trạng: Hoạt động bình thường</span>
+                </div>
+            </div>
+        </section>
+        <section id="lich-sua" class="panel">
+            <h2>Lịch sửa chữa sắp tới</h2>
+            <table class="ticket-table">
+                <thead>
+                    <tr>
+                        <th>Ngày</th>
+                        <th>Giờ</th>
+                        <th>Thiết bị</th>
+                        <th>Kỹ thuật viên</th>
+                        <th>Tình trạng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12/10/2025</td>
+                        <td>09:00 - 10:00</td>
+                        <td>TV Samsung</td>
+                        <td>Nguyễn Trọng Huy</td>
+                        <td>Đang xử lý</td>
+                    </tr>
+                    <tr>
+                        <td>25/10/2025</td>
+                        <td>13:30 - 14:30</td>
+                        <td>Máy giặt LG</td>
+                        <td>Đặng Hoài Tâm</td>
+                        <td>Đang xác nhận</td>
+                    </tr>
+                    <tr>
+                        <td>03/11/2025</td>
+                        <td>08:00 - 09:00</td>
+                        <td>Máy lạnh Daikin</td>
+                        <td>Lý Vân Khánh</td>
+                        <td>Lên lịch</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="mua-sam" class="panel">
+            <h2>Chương trình mua sắm & gia hạn bảo hành</h2>
+            <div class="status-grid">
+                <div class="status-card" style="background:linear-gradient(135deg, #fef3c7, #fde68a); border-color: rgba(251, 191, 36, 0.4);">
+                    <h3>Gia hạn bảo hành toàn diện</h3>
+                    <span>Chỉ từ 399.000đ / năm cho thiết bị gia dụng</span>
+                    <span>Tặng thêm 2 lần vệ sinh miễn phí</span>
+                </div>
+                <div class="status-card" style="background:linear-gradient(135deg, #fce7f3, #fbcfe8); border-color: rgba(244, 114, 182, 0.45);">
+                    <h3>Combo bảo trì mùa hè</h3>
+                    <span>Giảm 15% khi đặt lịch vệ sinh máy lạnh và máy giặt</span>
+                    <span>Ưu tiên lịch cuối tuần</span>
+                </div>
+                <div class="status-card" style="background:linear-gradient(135deg, #ccfbf1, #a7f3d0); border-color: rgba(16, 185, 129, 0.42);">
+                    <h3>Gói thành viên Premium</h3>
+                    <span>Bảo hành mở rộng 3 năm với hỗ trợ VIP</span>
+                    <span>Đường dây nóng 24/7 riêng biệt</span>
+                </div>
+            </div>
+        </section>
+        <section id="ho-tro" class="panel">
+            <h2>Yêu cầu hỗ trợ nhanh</h2>
+            <form>
+                <div class="field-group">
+                    <label for="ticket-type">Chọn loại yêu cầu</label>
+                    <select id="ticket-type">
+                        <option>Sự cố thiết bị</option>
+                        <option>Gia hạn bảo hành</option>
+                        <option>Đổi trả sản phẩm</option>
+                        <option>Tư vấn mua hàng</option>
+                    </select>
+                </div>
+                <div class="field-group">
+                    <label for="product">Thiết bị liên quan</label>
+                    <input id="product" type="text" placeholder="Ví dụ: TV Samsung QLED 55">
+                </div>
+                <div class="field-group">
+                    <label for="description">Mô tả chi tiết</label>
+                    <textarea id="description" placeholder="Mô tả triệu chứng, thời gian xảy ra..."></textarea>
+                </div>
+                <div class="field-group">
+                    <label for="time-slot">Thời gian liên hệ phù hợp</label>
+                    <input id="time-slot" type="text" placeholder="Ví dụ: Sau 18:00 từ Thứ 2 đến Thứ 6">
+                </div>
+                <button type="submit">Gửi yêu cầu</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        Cần hỗ trợ thêm? Gọi 1900 8888 (24/7) hoặc ghé trung tâm NovaCare gần nhất.
+    </footer>
+</body>
+</html>

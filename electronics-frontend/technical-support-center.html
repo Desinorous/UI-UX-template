@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chăm sóc kỹ thuật - NovaCare</title>
+    <link rel="stylesheet" href="css/management.css">
+</head>
+<body class="management-page technical-support">
+    <header>
+        <h1>Trung tâm chăm sóc kỹ thuật</h1>
+        <p>Tiếp nhận yêu cầu, tư vấn giải pháp, điều phối đội kỹ thuật và chăm sóc khách hàng xuyên suốt. Giao diện sáng rõ giúp ưu tiên phiếu nóng và gợi ý tri thức phù hợp.</p>
+    </header>
+    <main>
+        <section class="panel">
+            <h2>Hàng đợi ưu tiên</h2>
+            <div class="queue">
+                <article class="ticket-card">
+                    <h3>#SR-5528 · Máy lạnh Daikin báo lỗi U4</h3>
+                    <div class="ticket-meta">
+                        <span>Khách: Phạm Thu Hà</span>
+                        <span>Kênh: Hotline 1900</span>
+                        <span>Độ ưu tiên: Cao</span>
+                        <span>Tình trạng: Đang tư vấn</span>
+                    </div>
+                    <p>Triệu chứng: Máy lạnh báo lỗi U4, nghi ngờ lỗi kết nối giữa dàn nóng và dàn lạnh. Đã đặt lịch gặp trực tuyến với kỹ thuật viên lúc 13:00.</p>
+                </article>
+                <article class="ticket-card">
+                    <h3>#SR-5567 · TV Sony Bravia tắt đột ngột</h3>
+                    <div class="ticket-meta">
+                        <span>Khách: Nguyễn Văn Huy</span>
+                        <span>Kênh: Ứng dụng di động</span>
+                        <span>Độ ưu tiên: Trung bình</span>
+                        <span>Tình trạng: Chuyển kỹ thuật</span>
+                    </div>
+                    <p>Triệu chứng: TV tắt sau 5 phút, nghi nguồn. Hướng dẫn khách kiểm tra ổ điện và khởi động lại; chờ phản hồi.</p>
+                </article>
+                <article class="ticket-card">
+                    <h3>#SR-5588 · Máy lọc không khí Sharp báo lỗi E2</h3>
+                    <div class="ticket-meta">
+                        <span>Khách: Lê Mỹ Anh</span>
+                        <span>Kênh: Zalo OA</span>
+                        <span>Độ ưu tiên: Thấp</span>
+                        <span>Tình trạng: Đã gửi hướng dẫn</span>
+                    </div>
+                    <p>Triệu chứng: Mã lỗi E2 khi thay màng lọc. Đã gửi video hướng dẫn và đặt lịch kiểm tra nếu lỗi tái diễn trong 24h.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="split">
+            <div class="panel">
+                <h2>Gợi ý tri thức tức thời</h2>
+                <div class="suggestion">
+                    <h3>Lỗi U4 máy lạnh Daikin</h3>
+                    <ul>
+                        <li>Kiểm tra lại dây tín hiệu giữa dàn nóng và dàn lạnh.</li>
+                        <li>Cài đặt lại địa chỉ dàn lạnh bằng remote chuyên dụng.</li>
+                        <li>Đo điện áp cung cấp dàn nóng (yêu cầu kỹ thuật viên).</li>
+                    </ul>
+                </div>
+                <div class="suggestion" style="background:rgba(243,232,255,0.94); border-color:rgba(168,85,247,0.38); box-shadow:0 16px 34px rgba(147,51,234,0.26); margin-top:16px;">
+                    <h3>TV Sony tự tắt</h3>
+                    <ul>
+                        <li>Hỏi khách đã cập nhật firmware chưa.</li>
+                        <li>Kiểm tra chế độ tiết kiệm năng lượng.</li>
+                        <li>Đề nghị reset cứng bằng tổ hợp phím nguồn + volume.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel" style="background:rgba(255,255,255,0.96); border-color:rgba(248,113,113,0.35);">
+                <h2>Hiệu suất tổng quan ca trực</h2>
+                <div class="metrics">
+                    <div class="metric">
+                        <span>Phiếu mới</span>
+                        <strong>34</strong>
+                    </div>
+                    <div class="metric">
+                        <span>Đã xử lý</span>
+                        <strong>28</strong>
+                    </div>
+                    <div class="metric">
+                        <span>Đánh giá 5⭐</span>
+                        <strong>22</strong>
+                    </div>
+                    <div class="metric">
+                        <span>SLA giữ lời</span>
+                        <strong>98%</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel" style="background:rgba(255,255,255,0.94); border-color:rgba(56,189,248,0.4);">
+            <h2>Biểu mẫu ghi nhận nhanh</h2>
+            <form style="display:grid; gap:16px;">
+                <div style="display:grid; gap:6px;">
+                    <label for="channel">Kênh tiếp nhận</label>
+                    <select id="channel" style="padding:12px 14px; border-radius:14px; border:1px solid rgba(99,102,241,0.4); background:rgba(255,255,255,0.96);">
+                        <option>Hotline</option>
+                        <option>Email</option>
+                        <option>Zalo</option>
+                        <option>Ứng dụng</option>
+                    </select>
+                </div>
+                <div style="display:grid; gap:6px;">
+                    <label for="customer">Tên khách hàng</label>
+                    <input id="customer" type="text" placeholder="Ví dụ: Nguyễn Minh Khang" style="padding:12px 14px; border-radius:14px; border:1px solid rgba(236,72,153,0.35); background:rgba(255,255,255,0.96);">
+                </div>
+                <div style="display:grid; gap:6px;">
+                    <label for="issue">Tóm tắt sự cố</label>
+                    <textarea id="issue" placeholder="Mô tả triệu chứng chính, thời điểm xảy ra..." style="padding:12px 14px; border-radius:14px; border:1px solid rgba(59,130,246,0.35); background:rgba(255,255,255,0.96); min-height:120px;"></textarea>
+                </div>
+                <button type="submit" style="justify-self:start; padding:12px 26px; border:none; border-radius:999px; background:linear-gradient(90deg,#f97316,#ec4899); color:#fff; font-weight:600; cursor:pointer; box-shadow:0 12px 26px rgba(236,72,153,0.35);">Lưu phiếu</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        CSKH NovaCare · Đường dây nội bộ: 1900 2299 · Email: supportdesk@novacare.vn
+    </footer>
+</body>
+</html>

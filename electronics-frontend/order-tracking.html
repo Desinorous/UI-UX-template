@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theo dõi đơn & tiến trình sản phẩm - NovaCare</title>
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body class="shop-page tracking-page">
+    <header>
+        <h1>Theo dõi đơn & tiến trình sản phẩm</h1>
+        <p>Nhập mã đơn hàng hoặc mã bảo hành để xem trạng thái xử lý, lịch giao hàng hoặc tiến trình sửa chữa tại NovaCare.</p>
+    </header>
+    <main>
+        <section class="tracker">
+            <h2>Tra cứu nhanh</h2>
+            <div class="search-form">
+                <div style="display:grid; gap:6px;">
+                    <label for="order">Mã đơn hàng</label>
+                    <input id="order" type="text" placeholder="VD: SO-23918 hoặc WR-2025-8831">
+                </div>
+                <div style="display:grid; gap:6px;">
+                    <label for="phone">Số điện thoại</label>
+                    <input id="phone" type="text" placeholder="Số bạn dùng khi mua hàng">
+                </div>
+                <div style="display:grid; gap:6px;">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" placeholder="email@novacare.vn">
+                </div>
+            </div>
+            <button type="button">Xem tiến trình</button>
+            <div class="timeline">
+                <div class="step">
+                    <strong>Trạng thái: Đang sửa chữa</strong>
+                    <span>Thiết bị: TV Samsung QLED 55" · Mã WR-2025-8831</span>
+                    <p>Đã nhận tại trung tâm Quận 7, chờ linh kiện Board T-Con (dự kiến 30/09).</p>
+                </div>
+                <div class="step" style="background:linear-gradient(135deg, rgba(236, 254, 255,0.4), rgba(191, 219, 254,0.4)); border-color:rgba(56,189,248,0.32);">
+                    <strong>Bước tiếp theo</strong>
+                    <p>Kỹ thuật viên Minh Trí sẽ lắp đặt và nghiệm thu, cập nhật video kiểm tra gửi khách.</p>
+                </div>
+            </div>
+        </section>
+        <section class="status">
+            <article class="status-card">
+                <h3>Đơn hàng SO-23918</h3>
+                <p>Giao hàng dự kiến: 01/10/2025 · Shipper: NovaCare Express.</p>
+                <p>Đã rời kho chính lúc 08:30 ngày 29/09.</p>
+            </article>
+            <article class="status-card">
+                <h3>Phiếu sửa chữa WR-2025-6744</h3>
+                <p>Trạng thái: Hoàn tất · Chờ phản hồi khách hàng.</p>
+                <p>Khuyến nghị: Đặt lịch vệ sinh định kỳ sau 6 tháng.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        Trung tâm theo dõi NovaCare · Hỗ trợ 24/7: tracking@novacare.vn
+    </footer>
+</body>
+</html>

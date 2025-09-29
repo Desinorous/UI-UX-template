@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thủ kho - NovaCare</title>
+    <link rel="stylesheet" href="css/management.css">
+</head>
+<body class="management-page storekeeper">
+    <header>
+        <h1>Bảng điều phối thủ kho</h1>
+        <p>Giám sát xuất nhập, nhận cảnh báo tồn kho và phối hợp với kỹ thuật viên, bán hàng để đảm bảo linh kiện luôn sẵn sàng.</p>
+    </header>
+    <main>
+        <section class="panel">
+            <h2>Tồn kho trọng yếu</h2>
+            <div class="inventory-grid">
+                <div class="inventory-card">
+                    <h3>Board nguồn TV Sony X90J</h3>
+                    <span>Tồn kho: 62</span>
+                    <span>Tồn tối thiểu: 50</span>
+                    <span>Vị trí: Kệ B2-05</span>
+                </div>
+                <div class="inventory-card">
+                    <h3>Motor máy giặt LG DD</h3>
+                    <span>Tồn kho: 28</span>
+                    <span>Tồn tối thiểu: 40</span>
+                    <span>Vị trí: Kệ C1-02</span>
+                </div>
+                <div class="inventory-card">
+                    <h3>Sensor nhiệt Daikin</h3>
+                    <span>Tồn kho: 85</span>
+                    <span>Tồn tối thiểu: 60</span>
+                    <span>Vị trí: Kệ A3-11</span>
+                </div>
+                <div class="inventory-card">
+                    <h3>Bộ lọc máy lọc không khí Sharp</h3>
+                    <span>Tồn kho: 140</span>
+                    <span>Tồn tối thiểu: 80</span>
+                    <span>Vị trí: Kệ D4-07</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Lịch nhập xuất trong ngày</h2>
+            <div style="border-radius:20px; overflow:hidden; border:1px solid rgba(248,113,113,0.45);">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Thời gian</th>
+                            <th>Mã phiếu</th>
+                            <th>Loại</th>
+                            <th>Vật tư</th>
+                            <th>Số lượng</th>
+                            <th>Ghi chú</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:15</td>
+                            <td>IM-2391</td>
+                            <td>Nhập</td>
+                            <td>Board nguồn Sony X90J</td>
+                            <td>40</td>
+                            <td>Nhà cung cấp: Sony VN</td>
+                        </tr>
+                        <tr>
+                            <td>09:45</td>
+                            <td>EX-4512</td>
+                            <td>Xuất</td>
+                            <td>Motor máy giặt LG DD</td>
+                            <td>6</td>
+                            <td>Giao đội kỹ thuật miền Nam</td>
+                        </tr>
+                        <tr>
+                            <td>11:20</td>
+                            <td>EX-4519</td>
+                            <td>Xuất</td>
+                            <td>Bộ lọc Sharp</td>
+                            <td>30</td>
+                            <td>Giao cửa hàng Lê Văn Sỹ</td>
+                        </tr>
+                        <tr>
+                            <td>14:05</td>
+                            <td>IM-2398</td>
+                            <td>Nhập</td>
+                            <td>Sensor nhiệt Daikin</td>
+                            <td>120</td>
+                            <td>Nhà cung cấp: Daikin Depot</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="flex">
+            <div class="panel" style="background:rgba(255,255,255,0.96); border-color:rgba(248,113,113,0.4);">
+                <h2>Cảnh báo tồn kho</h2>
+                <div class="alert">
+                    <h3>Mức tồn dưới chuẩn</h3>
+                    <ul>
+                        <li>Motor máy giặt LG DD còn 28 (thiếu 12 so với chuẩn). Đề xuất đặt 40 chiếc.</li>
+                        <li>Board điều khiển máy lạnh Panasonic chỉ còn 18. Kiểm tra đơn hàng đang vận chuyển.</li>
+                    </ul>
+                </div>
+                <div class="alert" style="background:linear-gradient(135deg, rgba(254,240,138,0.95), rgba(249,250,229,0.95)); border-color:rgba(234,179,8,0.4); box-shadow:0 18px 38px rgba(234,179,8,0.24); margin-top:16px;">
+                    <h3>Sắp hết hạn bảo quản</h3>
+                    <ul>
+                        <li>Pin dự phòng robot hút bụi Xiaomi: 24 bộ còn 30 ngày.</li>
+                        <li>Gel tản nhiệt CPU: 12 tuýp còn 45 ngày.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel" style="background:rgba(255,255,255,0.96); border-color:rgba(249,115,22,0.35);">
+                <h2>Phiếu nhập xuất nhanh</h2>
+                <form class="form-group">
+                    <div style="display:grid; gap:6px;">
+                        <label for="type">Loại phiếu</label>
+                        <select id="type">
+                            <option>Nhập kho</option>
+                            <option>Xuất kho</option>
+                            <option>Chuyển kho</option>
+                        </select>
+                    </div>
+                    <div style="display:grid; gap:6px;">
+                        <label for="item">Vật tư</label>
+                        <input id="item" type="text" placeholder="Ví dụ: Board nguồn TV Sony X90J">
+                    </div>
+                    <div style="display:grid; gap:6px;">
+                        <label for="quantity">Số lượng</label>
+                        <input id="quantity" type="number" min="1" value="1">
+                    </div>
+                    <div style="display:grid; gap:6px;">
+                        <label for="note">Ghi chú</label>
+                        <textarea id="note" placeholder="Thông tin đơn hàng, khách nhận..."></textarea>
+                    </div>
+                    <button type="submit">Tạo phiếu</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Trung tâm kho NovaCare · Hotline nội bộ: 1900 7700 · Email: warehouse@novacare.vn
+    </footer>
+</body>
+</html>
