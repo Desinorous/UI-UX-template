@@ -392,7 +392,7 @@ body * {
 }
 
 /* ==================================== Feature */
-.home-page .featured {
+.home-page .featured-devices {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 28px;
     padding: 32px;
@@ -402,13 +402,13 @@ body * {
     gap: 24px;
 }
 
-.home-page .product-grid {
+.home-page .device-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-.home-page .product-card {
+.home-page .device-card {
     border-radius: 22px;
     padding: 20px;
     background: linear-gradient(135deg, rgba(253, 230, 138, 0.35), rgba(254, 202, 202, 0.35));
@@ -418,12 +418,12 @@ body * {
     gap: 10px;
 }
 
-.home-page .product-card h4 {
+.home-page .device-card h4 {
     font-size: 18px;
     color: #b45309;
 }
 
-.home-page .product-card span {
+.home-page .device-card span {
     color: #7c2d12;
     font-weight: 600;
 }
@@ -495,27 +495,28 @@ body * {
     transform: translateY(-2px);
 }
 
-.home-page .product-slider {
+.home-page .device-slider {
     position: relative;
 }
 
-.home-page .product-window {
+.home-page .device-window {
     overflow: hidden;
 }
 
-.home-page .product-track {
+.home-page .device-track {
     display: flex;
     gap: 24px;
     transition: transform 0.4s ease;
 }
 
-.home-page .product-track .product-card {
+.home-page .device-track .device-card {
     flex: 0 0 calc((100% - 72px) / 4);
 }
 
 .home-page .category-section {
     display: grid;
     gap: 18px;
+    border: 1px solid rgba(249, 115, 22, 0.18);
 }
 
 .home-page .section-heading {
@@ -539,7 +540,7 @@ body * {
     border: 0;
 }
 
-.home-page .product-list {
+.home-page .device-list {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 28px;
     padding: 32px;
@@ -549,22 +550,22 @@ body * {
     gap: 22px;
 }
 
-.home-page .product-list.new-products {
+.home-page .device-list.new-devices {
     border-color: rgba(34, 197, 94, 0.3);
     box-shadow: 0 22px 48px rgba(34, 197, 94, 0.18);
 }
 
-.home-page .product-list.best-sellers {
+.home-page .device-list.best-sellers {
     border-color: rgba(249, 115, 22, 0.32);
     box-shadow: 0 22px 48px rgba(249, 115, 22, 0.2);
 }
 
-.home-page .product-list .product-card {
+.home-page .device-list .device-card {
     background: linear-gradient(135deg, rgba(236, 254, 255, 0.45), rgba(191, 219, 254, 0.45));
     border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
-.home-page .product-list.best-sellers .product-card {
+.home-page .device-list.best-sellers .device-card {
     background: linear-gradient(135deg, rgba(254, 226, 226, 0.5), rgba(254, 215, 170, 0.5));
     border: 1px solid rgba(249, 115, 22, 0.32);
 }
@@ -643,8 +644,8 @@ body * {
 }
 
 
-/* ======================================product list styling refresh */
-.home-page .product-list {
+/* ======================================device list styling refresh */
+.home-page .device-list {
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(14, 165, 233, 0.05));
     border-radius: 30px;
     padding: 32px;
@@ -654,46 +655,46 @@ body * {
     gap: 22px;
 }
 
-.home-page .product-list.new-products {
+.home-page .device-list.new-devices {
     background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(59, 130, 246, 0.08));
     border: 1px solid rgba(99, 102, 241, 0.18);
 }
 
-.home-page .product-list.best-sellers {
+.home-page .device-list.best-sellers {
     background: linear-gradient(135deg, rgba(249, 115, 22, 0.08), rgba(251, 191, 36, 0.08));
     border: 1px solid rgba(249, 115, 22, 0.18);
 }
 
-.home-page .product-list .product-card {
+.home-page .device-list .device-card {
     background: rgba(255, 255, 255, 0.94);
     border: 1px solid rgba(226, 232, 240, 0.6);
     box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
 }
 
-.home-page .product-list.new-products .product-card {
+.home-page .device-list.new-devices .device-card {
     border: 1px solid rgba(129, 140, 248, 0.3);
     background: linear-gradient(135deg, rgba(129, 140, 248, 0.12), rgba(56, 189, 248, 0.12));
 }
 
-.home-page .product-list.best-sellers .product-card {
+.home-page .device-list.best-sellers .device-card {
     border: 1px solid rgba(251, 146, 60, 0.35);
     background: linear-gradient(135deg, rgba(251, 191, 36, 0.14), rgba(248, 113, 113, 0.12));
 }
 
-.home-page .product-pages {
+.home-page .device-pages {
     position: relative;
 }
 
-.home-page .product-page {
+.home-page .device-page {
     display: none;
 }
 
-.home-page .product-page.is-active {
+.home-page .device-page.is-active {
     display: block;
-    animation: productFade 0.35s ease;
+    animation: deviceFade 0.35s ease;
 }
 
-.home-page .product-page .product-grid {
+.home-page .device-page .device-grid {
     margin-top: 0;
 }
 
@@ -726,7 +727,7 @@ body * {
     transform: translateY(-2px);
 }
 
-@keyframes productFade {
+@keyframes deviceFade {
     from {
         opacity: 0;
         transform: translateY(12px);
@@ -749,7 +750,7 @@ body * {
     font-size: 14px;
 }
 
-/* ==============================product-catalog.html */
+/* ==============================device-catalog.html */
 body.shop-page.catalog-page {
     min-height: 100vh;
     background: linear-gradient(135deg, #f0fdfa, #eff6ff 45%, #fff5f5 100%);
@@ -810,13 +811,13 @@ body.shop-page.catalog-page select {
     color: #1e1b4b;
 }
 
-body.shop-page.catalog-page .product-grid {
+body.shop-page.catalog-page .device-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-body.shop-page.catalog-page .product-card {
+body.shop-page.catalog-page .device-card {
     border-radius: 22px;
     padding: 22px;
     background: linear-gradient(135deg, rgba(199, 210, 254, 0.28), rgba(125, 211, 252, 0.28));
@@ -826,7 +827,7 @@ body.shop-page.catalog-page .product-card {
     gap: 8px;
 }
 
-body.shop-page.catalog-page .product-card h3 {
+body.shop-page.catalog-page .device-card h3 {
     font-size: 18px;
     color: #312e81;
 }
@@ -846,12 +847,12 @@ body.shop-page.catalog-page .tags span {
     font-weight: 600;
 }
 
-body.shop-page.catalog-page .product-card strong {
+body.shop-page.catalog-page .device-card strong {
     color: #0f172a;
     font-size: 16px;
 }
 
-body.shop-page.catalog-page .product-card a {
+body.shop-page.catalog-page .device-card a {
     justify-self: start;
     margin-top: 6px;
     padding: 10px 22px;
@@ -910,7 +911,7 @@ body.shop-page.detail-page main {
     gap: 32px;
 }
 
-body.shop-page.detail-page .product-detail {
+body.shop-page.detail-page .device-detail {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 30px;
     padding: 32px;
@@ -2189,4 +2190,17 @@ body.shop-page.account-page {
     align-items: center;
     border-top: 1px solid rgba(148, 163, 184, 0.25);
     background: rgba(248, 250, 252, 0.75);
+}body.shop-page.home-page .hero-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(248, 250, 252, 0.35);
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+body.shop-page.home-page .hero-dot.active {
+    background: #f8fafc;
+    transform: scale(1.2);
 }
