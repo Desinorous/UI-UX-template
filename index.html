@@ -1,43 +1,45 @@
 ﻿<!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaCare Shop - Trang chu</title>
+    <title>NovaCare Shop</title>
     <link rel="stylesheet" href="css/shop.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="shop-page home-page">
-    <header>
-        <div class="header-top">
-            <h1>NovaCare Shop</h1>
-            <p>Kho thiet bi dien tu, phu kien va dich vu bao hanh chinh hang. Trai nghiem mua sam sang mau, truc quan va
-                de dang cho moi khach hang.</p>
-        </div>
-        <div class="header-toolbar">
+    <header class="header-toolbar">
+        <h1>Shop88</h1>
+        <div class="header-center">
             <div class="category-menu" data-category-menu>
                 <button type="button" data-category-toggle>
-                    <span>Danh muc</span>
+                    <span>Danh mục</span>
                     <span aria-hidden="true">☰</span>
                 </button>
                 <div class="category-panel" data-category-panel>
-                    <a href="shop-home.html">Trang chu</a>
-                    <a href="product-catalog.html">San pham</a>
-                    <a href="device-detail.html">Chi tiet thiet bi</a>
-                    <a href="cart.html">Gio hang</a>
-                    <a href="checkout.html">Thanh toan</a>
-                    <a href="order-tracking.html">Theo doi don</a>
-                    <a href="login.html">Dang nhap</a>
-                    <a href="customer-portal.html">Khong gian khach hang</a>
+                    <a href="product-catalog.html">Thiết bị</a>
+                    <a href="device-detail.html">Thông tin thiết bị</a>
+                    <a href="checkout.html">Thanh toán</a>
+                    <a href="order-tracking.html">Đơn hàng</a>
+                    <a href="customer-portal.html">Lịch sử</a>
                 </div>
             </div>
             <form class="search-bar" action="#" method="get">
-                <label for="search" class="sr-only">Tim kiem san pham</label>
+                <label for="search" class="sr-only"></label>
                 <input id="search" name="search" type="search"
-                    placeholder="Tim thiet bi, linh kien, dich vu hoac ma bao hanh...">
-                <button type="submit">Tim kiem</button>
+                    placeholder="Tìm thiết bị, linh kiện, ...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
+        </div>
+        <div class="header-bottom">
+            <a href="login.html" class="order-btn login-btn"><i class="fa-solid fa-user"></i></a>
+            <a href="cart.html" class="order-btn"><i class="fa-solid fa-cart-shopping"></i>Sản phẩm</a>
         </div>
     </header>
 
@@ -375,14 +377,18 @@
             var panel = menu.querySelector('[data-category-panel]');
             if (!toggleBtn || !panel) return;
 
-            toggleBtn.addEventListener('click', function () {
+            toggleBtn.addEventListener('mouseenter', function () {
                 panel.classList.toggle('show');
             });
 
-            document.addEventListener('click', function (event) {
+            toggleBtn.addEventListener('mouseleave', function (event) {
                 if (!menu.contains(event.target)) {
                     panel.classList.remove('show');
                 }
+            });
+
+            panel.addEventListener('mouseleave', function () {
+                panel.classList.remove('show');
             });
         })();
 
