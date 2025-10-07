@@ -12,6 +12,8 @@ html {
 }
 
 body {
+    /* user-select: none; */
+    caret-color: transparent;
     font-size: 1.8rem;
 }
 
@@ -2190,7 +2192,9 @@ body.shop-page.account-page {
     align-items: center;
     border-top: 1px solid rgba(148, 163, 184, 0.25);
     background: rgba(248, 250, 252, 0.75);
-}body.shop-page.home-page .hero-dot {
+}
+
+body.shop-page.home-page .hero-dot {
     width: 12px;
     height: 12px;
     border-radius: 999px;
