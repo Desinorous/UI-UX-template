@@ -1708,10 +1708,11 @@ body.shop-page.forgot-page a {
     text-align: center;
 }
 
-/*  ========================= error-404.html, error-403.html, error-502.html */
+/*  ========================= error-404.html, error-403.html, error-502.html, error-500.html */
 body.shop-page.error-404-page,
 body.shop-page.error-403-page,
-body.shop-page.error-502-page {
+body.shop-page.error-502-page,
+body.shop-page.error-500-page {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -1734,9 +1735,15 @@ body.shop-page.error-502-page {
     color: #92400e;
 }
 
+body.shop-page.error-500-page {
+    background: linear-gradient(135deg, #e0f2fe, #f5f3ff, #cffafe);
+    color: #0f172a;
+}
+
 body.shop-page.error-404-page .card,
 body.shop-page.error-403-page .card,
-body.shop-page.error-502-page .card {
+body.shop-page.error-502-page .card,
+body.shop-page.error-500-page .card {
     width: min(520px, 100%);
     background: rgba(255, 255, 255, 0.95);
     border-radius: 32px;
@@ -1761,6 +1768,11 @@ body.shop-page.error-502-page .card {
     box-shadow: 0 30px 60px rgba(251, 191, 36, 0.25);
 }
 
+body.shop-page.error-500-page .card {
+    border: 1px solid rgba(99, 102, 241, 0.28);
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
+}
+
 body.shop-page.error-404-page h1 {
     font-size: 48px;
     color: #ef4444;
@@ -1776,9 +1788,15 @@ body.shop-page.error-502-page h1 {
     color: #d97706;
 }
 
+body.shop-page.error-500-page h1 {
+    font-size: 48px;
+    color: #2563eb;
+}
+
 body.shop-page.error-404-page a,
 body.shop-page.error-403-page a,
-body.shop-page.error-502-page a {
+body.shop-page.error-502-page a,
+body.shop-page.error-500-page a {
     justify-self: center;
     padding: 12px 26px;
     border-radius: 999px;
@@ -1802,6 +1820,12 @@ body.shop-page.error-502-page a {
     background: linear-gradient(90deg, #f97316, #fde047);
     color: #7c2d12;
     box-shadow: 0 16px 32px rgba(234, 179, 8, 0.28);
+}
+
+body.shop-page.error-500-page a {
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    color: #f8fafc;
+    box-shadow: 0 16px 32px rgba(79, 70, 229, 0.28);
 }
 
 
