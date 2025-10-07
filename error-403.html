@@ -1,17 +1,52 @@
 ﻿<!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lỗi 403 - Truy cập bị từ chối</title>
+    <link rel="stylesheet" href="css/error.css">
     <link rel="stylesheet" href="css/shop.css">
 </head>
-<body class="shop-page error-403-page">
-    <section class="card">
-        <h1>403</h1>
-        <h2>Bạn không có quyền truy cập</h2>
-        <p>Tài khoản của bạn chưa được cấp quyền hoặc liên kết yêu cầu xác thực đặc biệt. Vui lòng đăng nhập đúng vai trò hoặc liên hệ hotline 1900 8888.</p>
-        <a href="login.html">Đăng nhập lại</a>
-    </section>
+
+<body class="home-page">
+    <header class="header">
+        <h1 class="header-title">Shop88</h1>
+        <div class="header-center">
+            <div class="category-menu" data-category-menu>
+                <button type="button" data-category-toggle>
+                    <span>Danh mục</span>
+                    <span aria-hidden="true">☰</span>
+                </button>
+                <div class="category-panel" data-category-panel>
+                    <a href="device-catalog.html">Thiết bị</a>
+                    <a href="device-detail.html">Thông tin thiết bị</a>
+                    <a href="checkout.html">Thanh toán</a>
+                    <a href="order-tracking.html">Đơn hàng</a>
+                    <a href="customer-portal.html">Lịch sử</a>
+                </div>
+            </div>
+            <form class="search-bar" action="#" method="get">
+                <label for="search" class="sr-only"></label>
+                <input id="search" name="search" type="search" placeholder="Tìm thiết bị, linh kiện, ...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <div class="header-bottom">
+            <a href="login.html" class="order-btn login-btn"><i class="fa-solid fa-user"></i></a>
+            <a href="cart.html" class="order-btn"><i class="fa-solid fa-cart-shopping"></i>Sản phẩm</a>
+        </div>
+    </header>
+    <div class="shop-page error-403-page">
+        <section class="card">
+            <h1>403</h1>
+            <h2>Bạn không có quyền truy cập</h2>
+            <p>Tài khoản của bạn chưa được cấp quyền hoặc liên kết yêu cầu xác thực đặc biệt</p>
+            <form action="">
+                <a href="login.html">Đăng nhập lại</a>
+            </form>
+        </section>
+    </div>
 </body>
+
 </html>
