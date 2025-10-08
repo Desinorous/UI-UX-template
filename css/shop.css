@@ -581,6 +581,10 @@ body * {
     box-shadow: 0 22px 48px rgba(249, 115, 22, 0.2);
 }
 
+.home-page .device-list.best-sellers .device-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
 .home-page .device-list .device-card {
     background: linear-gradient(135deg, rgba(236, 254, 255, 0.45), rgba(191, 219, 254, 0.45));
     border: 1px solid rgba(59, 130, 246, 0.3);
@@ -589,6 +593,11 @@ body * {
 .home-page .device-list.best-sellers .device-card {
     background: linear-gradient(135deg, rgba(254, 226, 226, 0.5), rgba(254, 215, 170, 0.5));
     border: 1px solid rgba(249, 115, 22, 0.32);
+}
+
+.home-page .device-list.best-sellers .device-card:only-child {
+    max-width: 320px;
+    justify-self: center;
 }
 
 .home-page header nav {
@@ -2130,4 +2139,9 @@ body.shop-page.home-page .hero-dot {
 body.shop-page.home-page .hero-dot.active {
     background: #f8fafc;
     transform: scale(1.2);
+}
+
+.home-page .device-list.new-devices .device-card:only-child {
+    max-width: 320px;
+    justify-self: center;
 }
