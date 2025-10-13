@@ -1203,3 +1203,368 @@ body:not(.sidebar-collapsed) .admin-main {
     color: #92400e;
     font-size: 14px;
 }
+
+/* device-management pages */
+.management-page.device-management {
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, rgba(224, 242, 254, 0.9), rgba(240, 249, 255, 0.85) 40%, rgba(254, 243, 199, 0.75) 100%);
+    color: #0f172a;
+}
+
+.management-page.device-management .admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background: transparent;
+}
+
+.management-page.device-management .admin-topbar {
+    background: linear-gradient(90deg, #0ea5e9, #6366f1);
+    color: #f8fafc;
+    box-shadow: 0 10px 24px rgba(99, 102, 241, 0.25);
+}
+
+.management-page.device-management .topbar-left h1 {
+    color: #f1f5f9;
+    font-weight: 700;
+}
+
+
+/* -------------------------------------------------------- devices */
+.management-page.device-management .admin-main {
+    background: transparent;
+    padding: 96px 36px 52px;
+    display: grid;
+    gap: 24px;
+}
+
+body.sidebar-collapsed .management-page.device-management .admin-main {
+    margin-left: 0;
+}
+
+.management-page.device-management .panel {
+    height: max-content;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 24px;
+    padding: 24px 28px;
+    border: 1px solid rgba(14, 165, 233, 0.18);
+    box-shadow: 0 24px 60px rgba(45, 128, 206, 0.12);
+    backdrop-filter: blur(6px);
+}
+
+.management-page.device-management .panel h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1d4ed8;
+    margin-bottom: 16px;
+}
+
+.management-page.device-management .device-toolbar {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.management-page.device-management .device-toolbar-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.management-page.device-management .device-search {
+    position: relative;
+    min-width: 260px;
+}
+
+.management-page.device-management .device-search input[type="search"] {
+    width: 100%;
+    padding: 10px 14px 10px 38px;
+    border-radius: 14px;
+    border: 1px solid rgba(30, 64, 175, 0.18);
+    box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.08);
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #0f172a;
+}
+
+.management-page.device-management .device-search i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+}
+
+.management-page.device-management .btn,
+.management-page.device-management button.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(14, 165, 233, 0.28);
+    background: rgba(255, 255, 255, 0.85);
+    color: #1d4ed8;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.management-page.device-management .btn:hover,
+.management-page.device-management button.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.18);
+}
+
+.management-page.device-management .btn.btn-add,
+.management-page.device-management button.btn.btn-add {
+    background: linear-gradient(90deg, #0ea5e9, #6366f1);
+    color: #f8fafc;
+    border-color: transparent;
+}
+
+.management-page.device-management .btn.device-remove,
+.management-page.device-management button.btn.device-remove {
+    background: linear-gradient(90deg, #f97316, #ef4444);
+    color: #fff7ed;
+    border-color: transparent;
+}
+
+.management-page.device-management .btn.device-btn,
+.management-page.device-management button.btn.device-btn {
+    background: transparent;
+    color: #1d4ed8;
+}
+
+.management-page.device-management .table-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.management-page.device-management table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.management-page.device-management thead {
+    background: linear-gradient(90deg, rgba(14, 165, 233, 0.18), rgba(99, 102, 241, 0.18));
+    color: #1e3a8a;
+}
+
+.management-page.device-management th,
+.management-page.device-management td {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.management-page.device-management tbody tr {
+    transition: background 0.2s ease;
+}
+
+.management-page.device-management tbody tr:nth-child(even) {
+    background: rgba(248, 250, 252, 0.7);
+}
+
+.management-page.device-management tbody tr:hover {
+    background: rgba(224, 242, 254, 0.75);
+}
+
+.management-page.device-management .device-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    padding: 6px;
+}
+
+.management-page.device-management .device-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    background: rgba(16, 185, 129, 0.12);
+    color: #047857;
+}
+
+.management-page.device-management .device-status.is-out {
+    background: rgba(239, 68, 68, 0.14);
+    color: #991b1b;
+}
+
+.management-page.device-management .device-show-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.management-page.device-management .device-form {
+    display: grid;
+    gap: 20px;
+}
+
+.management-page.device-management .device-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px 18px;
+}
+
+.management-page.device-management .device-form .form-field {
+    display: grid;
+    gap: 6px;
+}
+
+.management-page.device-management .device-form label {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.management-page.device-management .device-form input,
+.management-page.device-management .device-form select,
+.management-page.device-management .device-form textarea {
+    padding: 11px 13px;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+    color: #0f172a;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.management-page.device-management .device-form input:focus,
+.management-page.device-management .device-form select:focus,
+.management-page.device-management .device-form textarea:focus {
+    border-color: rgba(99, 102, 241, 0.6);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+    outline: none;
+}
+
+.management-page.device-management .device-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.management-page.device-management .device-form .form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.management-page.device-management .device-form .form-actions--spread {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.management-page.device-management .device-form .form-actions--spread>* {
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.management-page.device-management .device-detail {
+    display: grid;
+    grid-template-columns: minmax(200px, 240px) 1fr;
+    gap: 28px;
+}
+
+.management-page.device-management .device-photo {
+    border-radius: 20px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 18px;
+    display: grid;
+    place-items: center;
+}
+
+.management-page.device-management .device-photo img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.management-page.device-management .device-meta {
+    display: grid;
+    gap: 18px;
+}
+
+.management-page.device-management .device-meta dl {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 12px 16px;
+}
+
+.management-page.device-management .device-meta dt {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.management-page.device-management .device-meta dd {
+    color: #334155;
+}
+
+.management-page.device-management .device-meta .device-meta-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.management-page.device-management .danger-box {
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    background: rgba(254, 226, 226, 0.8);
+    border-radius: 18px;
+    padding: 16px 20px;
+    color: #7f1d1d;
+}
+
+.management-page.device-management .device-summary {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.management-page.device-management .device-summary img {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    padding: 8px;
+}
+
+.management-page.device-management .device-summary strong {
+    color: #0f172a;
+}
+
+.management-page.device-management .confirm-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.management-page.device-management .empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    color: #475569;
+}
+
+.management-page.device-management .device-remove {
+    display: grid;
+    gap: 20px;
+}
+
+.management-page.device-management .device-remove p {
+    margin: 0;
+    color: #475569;
+}

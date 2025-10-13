@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết thiết bị - NovaCare</title>
+    <meta name="description" content="Xem thông tin chi tiết của thiết bị trong hệ thống NovaCare.">
+    <link rel="stylesheet" href="../css/management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script defer src="../js/admin-sidebar.js"></script>
+</head>
+<body class="management-page device-management">
+<div class="admin-layout">
+    <aside class="admin-sidebar" aria-label="Chức năng quản trị">
+        <div class="brand">
+            <img src="../assets/img/device-placeholder.svg" alt="NovaCare logo">
+            <span>NovaCare</span>
+        </div>
+        <nav>
+            <a href="revenue-dashboard.html">Dashboard doanh thu</a>
+            <a href="admin-console.html">Bảng điều khiển</a>
+            <a href="order-tracking.html">Theo dõi đơn hàng</a>
+            <a href="storekeeper-dashboard.html">Kho & nhân viên kho</a>
+            <a href="technical-manager-dashboard.html">Quản lý kỹ thuật</a>
+            <a href="technical-staff-dashboard.html">Nhân viên kỹ thuật</a>
+            <a href="technical-support-dashboard.html">Hỗ trợ kỹ thuật</a>
+            <a class="active" href="devices.html"><i class="fa-solid fa-plug"></i><span> Thiết bị</span></a>
+        </nav>
+    </aside>
+
+    <header class="admin-topbar">
+        <div class="topbar-left">
+            <h1>Chi tiết thiết bị</h1>
+            <button class="sidebar-toggle" type="button" aria-label="Mở hoặc đóng menu" aria-expanded="false">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+        <div class="topbar-right">
+            <div class="user-area">
+                <a href="#" aria-label="Cài đặt"><i class="fa-solid fa-gear"></i></a>
+                <a href="#" aria-label="Tài khoản"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <section class="panel">
+            <a class="btn ghost" href="devices.html"><i class="fa-solid fa-arrow-left"></i><span>Về danh sách</span></a>
+        </section>
+
+        <section class="panel">
+            <div class="device-detail">
+                <div class="device-photo">
+                    <img src="../assets/img/device-placeholder.svg" alt="Hình minh họa thiết bị">
+                </div>
+                <div class="device-meta">
+                    <dl>
+                        <dt>Mã sản phẩm</dt>
+                        <dd id="device-id">AC-SH-12000</dd>
+
+                        <dt>Tên thiết bị</dt>
+                        <dd id="device-name">Máy lạnh Sharp Inverter 1.5HP</dd>
+
+                        <dt>Danh mục</dt>
+                        <dd id="device-category">Điều hòa</dd>
+
+                        <dt>Giá bán</dt>
+                        <dd id="device-price">9.490.000 ₫</dd>
+
+                        <dt>Bảo hành</dt>
+                        <dd id="device-warranty">24 tháng</dd>
+
+                        <dt>Tồn kho</dt>
+                        <dd id="device-stock">120</dd>
+
+                        <dt>Trạng thái</dt>
+                        <dd id="device-status">Đang bán</dd>
+
+                        <dt>Mô tả</dt>
+                        <dd id="device-description">Tiết kiệm điện, làm lạnh nhanh, lọc không khí.</dd>
+                    </dl>
+                    <div class="device-meta-actions">
+                        <a id="edit-link" class="btn primary" href="device-edit.html?id=AC-SH-12000">
+                            <i class="fa-solid fa-pen"></i><span>Sửa thông tin</span>
+                        </a>
+                        <a id="delete-link" class="btn danger" href="device-remove.html?id=AC-SH-12000">
+                            <i class="fa-solid fa-trash"></i><span>Xóa thiết bị</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var params = new URLSearchParams(window.location.search);
+        var id = params.get('id');
+        if (!id) return;
+        document.getElementById('device-id').textContent = id;
+        document.getElementById('edit-link').href = 'device-edit.html?id=' + encodeURIComponent(id);
+        document.getElementById('delete-link').href = 'device-remove.html?id=' + encodeURIComponent(id);
+    });
+</script>
+</body>
+</html>

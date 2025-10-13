@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý thiết bị - NovaCare</title>
+    <meta name="description" content="Danh sách thiết bị dành cho quản trị viên NovaCare.">
+    <link rel="stylesheet" href="../css/management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script defer src="../js/admin-sidebar.js"></script>
+</head>
+
+<body class="management-page device-management">
+    <div class="admin-layout">
+        <aside class="admin-sidebar" aria-label="Chức năng quản trị">
+            <div class="brand">
+                <img src="../assets/img/device-placeholder.svg" alt="NovaCare logo">
+                <span>NovaCare</span>
+            </div>
+            <nav>
+                <a href="revenue-dashboard.html">Dashboard doanh thu</a>
+                <a href="admin-console.html">Bảng điều khiển</a>
+                <a href="order-tracking.html">Theo dõi đơn hàng</a>
+                <a href="storekeeper-dashboard.html">Kho & nhân viên kho</a>
+                <a href="technical-manager-dashboard.html">Quản lý kỹ thuật</a>
+                <a href="technical-staff-dashboard.html">Nhân viên kỹ thuật</a>
+                <a href="technical-support-dashboard.html">Hỗ trợ kỹ thuật</a>
+                <a class="active" href="devices.html"><i class="fa-solid fa-plug"></i><span> Thiết bị</span></a>
+            </nav>
+        </aside>
+
+        <header class="admin-topbar">
+            <div class="topbar-left">
+                <h1>Quản lý thiết bị</h1>
+                <button class="sidebar-toggle" type="button" aria-label="Mở hoặc đóng menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+            <div class="topbar-right">
+                <div class="user-area">
+                    <a href="#" aria-label="Cài đặt"><i class="fa-solid fa-gear"></i></a>
+                    <a href="#" aria-label="Tài khoản"><i class="fa-solid fa-user"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <main class="admin-main">
+            <section class="panel">
+                <div class="device-toolbar">
+                    <div class="device-toolbar-actions">
+                        <a class="btn btn-add" href="device-add.html">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Thêm thiết bị</span>
+                        </a>
+                    </div>
+                    <div class="device-search">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <input id="device-search" type="search" placeholder="Tìm theo mã, tên thiết bị, danh mục..."
+                            aria-label="Tìm kiếm thiết bị">
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>Danh sách thiết bị</h2>
+                <div class="table-wrapper">
+                    <table class="device-table">
+                        <thead>
+                            <tr>
+                                <th>Ảnh</th>
+                                <th>Mã SP</th>
+                                <th>Tên thiết bị</th>
+                                <th>Danh mục</th>
+                                <th>Giá</th>
+                                <th>Tồn kho</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="device-thumb" src="../assets/img/device-placeholder.svg" alt=""></td>
+                                <td>AC-SH-12000</td>
+                                <td>Máy lạnh Sharp Inverter 1.5HP</td>
+                                <td>Điều hòa</td>
+                                <td>9.490.000 ₫</td>
+                                <td>120</td>
+                                <td><span class="device-status"></i>Đang
+                                        bán</span></td>
+                                <td class="device-show-actions">
+                                    <a class="btn device-btn" href="device-view.html?id=AC-SH-12000">Xem</a>
+                                    <a class="btn device-btn" href="device-edit.html?id=AC-SH-12000">Sửa</a>
+                                    <a class="btn device-remove" href="device-remove.html?id=AC-SH-12000">Xóa</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

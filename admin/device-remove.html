@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xóa thiết bị - NovaCare</title>
+    <meta name="description" content="Xác nhận xóa thiết bị khỏi hệ thống NovaCare.">
+    <link rel="stylesheet" href="../css/management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script defer src="../js/admin-sidebar.js"></script>
+</head>
+<body class="management-page device-management">
+<div class="admin-layout">
+    <aside class="admin-sidebar" aria-label="Chức năng quản trị">
+        <div class="brand">
+            <img src="../assets/img/device-placeholder.svg" alt="NovaCare logo">
+            <span>NovaCare</span>
+        </div>
+        <nav>
+            <a href="revenue-dashboard.html">Dashboard doanh thu</a>
+            <a href="admin-console.html">Bảng điều khiển</a>
+            <a href="order-tracking.html">Theo dõi đơn hàng</a>
+            <a href="storekeeper-dashboard.html">Kho & nhân viên kho</a>
+            <a href="technical-manager-dashboard.html">Quản lý kỹ thuật</a>
+            <a href="technical-staff-dashboard.html">Nhân viên kỹ thuật</a>
+            <a href="technical-support-dashboard.html">Hỗ trợ kỹ thuật</a>
+            <a class="active" href="devices.html"><i class="fa-solid fa-plug"></i><span> Thiết bị</span></a>
+        </nav>
+    </aside>
+
+    <header class="admin-topbar">
+        <div class="topbar-left">
+            <h1>Xóa thiết bị</h1>
+            <button class="sidebar-toggle" type="button" aria-label="Mở hoặc đóng menu" aria-expanded="false">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+        <div class="topbar-right">
+            <div class="user-area">
+                <a href="#" aria-label="Cài đặt"><i class="fa-solid fa-gear"></i></a>
+                <a href="#" aria-label="Tài khoản"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <section class="panel">
+            <a class="btn ghost" href="devices.html"><i class="fa-solid fa-arrow-left"></i><span>Về danh sách</span></a>
+        </section>
+
+        <section class="panel">
+            <div class="device-remove">
+                <div class="danger-box">
+                    <strong>Cảnh báo:</strong> Hành động này không thể hoàn tác. Thiết bị và dữ liệu liên quan sẽ bị ảnh hưởng.
+                </div>
+                <div class="device-summary">
+                    <img src="../assets/img/device-placeholder.svg" alt="Thiết bị cần xóa">
+                    <div>
+                        <div><strong>Mã SP:</strong> <span id="device-id">AC-SH-12000</span></div>
+                        <div><strong>Tên:</strong> Máy lạnh Sharp Inverter 1.5HP</div>
+                        <div><strong>Danh mục:</strong> Điều hòa</div>
+                        <div><strong>Trạng thái hiện tại:</strong> Đang bán</div>
+                    </div>
+                </div>
+                <p>Bạn có chắc chắn muốn xóa thiết bị này khỏi danh mục bán hàng?</p>
+                <div class="confirm-actions">
+                    <a class="btn ghost" href="device-view.html?id=AC-SH-12000">Xem chi tiết</a>
+                    <a class="btn ghost" href="devices.html">Hủy</a>
+                    <a id="confirm-delete" class="btn danger" href="devices.html"><i class="fa-solid fa-trash"></i><span>Xác nhận xóa</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var params = new URLSearchParams(window.location.search);
+        var id = params.get('id');
+        if (!id) return;
+        document.getElementById('device-id').textContent = id;
+        document.getElementById('confirm-delete').href = 'devices.html#deleted=' + encodeURIComponent(id);
+    });
+</script>
+</body>
+</html>

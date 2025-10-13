@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa thiết bị - NovaCare</title>
+    <meta name="description" content="Cập nhật thông tin thiết bị trong hệ thống NovaCare.">
+    <link rel="stylesheet" href="../css/management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script defer src="../js/admin-sidebar.js"></script>
+</head>
+<body class="management-page device-management">
+<div class="admin-layout">
+    <aside class="admin-sidebar" aria-label="Chức năng quản trị">
+        <div class="brand">
+            <img src="../assets/img/device-placeholder.svg" alt="NovaCare logo">
+            <span>NovaCare</span>
+        </div>
+        <nav>
+            <a href="revenue-dashboard.html">Dashboard doanh thu</a>
+            <a href="admin-console.html">Bảng điều khiển</a>
+            <a href="order-tracking.html">Theo dõi đơn hàng</a>
+            <a href="storekeeper-dashboard.html">Kho & nhân viên kho</a>
+            <a href="technical-manager-dashboard.html">Quản lý kỹ thuật</a>
+            <a href="technical-staff-dashboard.html">Nhân viên kỹ thuật</a>
+            <a href="technical-support-dashboard.html">Hỗ trợ kỹ thuật</a>
+            <a class="active" href="devices.html"><i class="fa-solid fa-plug"></i><span> Thiết bị</span></a>
+        </nav>
+    </aside>
+
+    <header class="admin-topbar">
+        <div class="topbar-left">
+            <h1>Sửa thiết bị</h1>
+            <button class="sidebar-toggle" type="button" aria-label="Mở hoặc đóng menu" aria-expanded="false">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+        <div class="topbar-right">
+            <div class="user-area">
+                <a href="#" aria-label="Cài đặt"><i class="fa-solid fa-gear"></i></a>
+                <a href="#" aria-label="Tài khoản"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <section class="panel">
+            <a class="btn ghost" href="devices.html"><i class="fa-solid fa-arrow-left"></i><span>Về danh sách</span></a>
+        </section>
+
+        <section class="panel">
+            <h2>Cập nhật thông tin</h2>
+            <form class="device-form" action="#" method="post">
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="code">Mã sản phẩm</label>
+                        <input id="code" name="code" value="AC-SH-12000" readonly aria-readonly="true">
+                    </div>
+                    <div class="form-field">
+                        <label for="name">Tên thiết bị</label>
+                        <input id="name" name="name" value="Máy lạnh Sharp Inverter 1.5HP" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="category">Danh mục</label>
+                        <select id="category" name="category" required>
+                            <option selected>Điều hòa</option>
+                            <option>Máy giặt & sấy</option>
+                            <option>TV & giải trí</option>
+                            <option>Gia dụng</option>
+                            <option>Smart home</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="price">Giá bán (₫)</label>
+                        <input id="price" name="price" type="number" min="0" step="1000" value="9490000" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="cost">Giá vốn (₫)</label>
+                        <input id="cost" name="cost" type="number" min="0" step="1000" value="8000000">
+                    </div>
+                    <div class="form-field">
+                        <label for="stock">Tồn kho</label>
+                        <input id="stock" name="stock" type="number" min="0" step="1" value="120" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="warranty">Bảo hành (tháng)</label>
+                        <input id="warranty" name="warranty" type="number" min="0" step="1" value="24">
+                    </div>
+                    <div class="form-field">
+                        <label for="status">Trạng thái</label>
+                        <select id="status" name="status" required>
+                            <option selected>Đang bán</option>
+                            <option>Ngừng bán</option>
+                            <option>Hết hàng</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="image">Ảnh (URL)</label>
+                        <input id="image" name="image" value="../assets/img/device-placeholder.svg">
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="description">Mô tả</label>
+                    <textarea id="description" name="description" rows="5">Tiết kiệm điện, làm lạnh nhanh, lọc không khí.</textarea>
+                </div>
+                <div class="form-actions form-actions--spread">
+                    <div>
+                        <a id="view-link" class="btn ghost" href="device-view.html?id=AC-SH-12000">Xem</a>
+                        <a id="delete-link" class="btn danger" href="device-remove.html?id=AC-SH-12000">Xóa</a>
+                    </div>
+                    <div>
+                        <a class="btn ghost" href="devices.html">Hủy</a>
+                        <button class="btn primary" type="submit">Lưu thay đổi</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var params = new URLSearchParams(window.location.search);
+        var id = params.get('id');
+        if (!id) return;
+        var codeInput = document.getElementById('code');
+        codeInput.value = id;
+        document.getElementById('view-link').href = 'device-view.html?id=' + encodeURIComponent(id);
+        document.getElementById('delete-link').href = 'device-remove.html?id=' + encodeURIComponent(id);
+    });
+</script>
+</body>
+</html>
