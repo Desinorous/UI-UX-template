@@ -1,15 +1,18 @@
 ﻿<!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaCare Shop - Giỏ hàng</title>
     <link rel="stylesheet" href="css/shop.css">
 </head>
+
 <body class="shop-page cart-page">
     <header>
         <h1>Giỏ hàng của bạn</h1>
-        <p>Kiểm tra sản phẩm, gói dịch vụ trước khi thanh toán. NovaCare đảm bảo giá tốt và chính sách bảo hành minh bạch.</p>
+        <p>Kiểm tra sản phẩm, gói dịch vụ trước khi thanh toán. NovaCare đảm bảo giá tốt và chính sách bảo hành minh
+            bạch.</p>
     </header>
     <main>
         <section class="cart-wrapper">
@@ -21,29 +24,27 @@
                         <th>Số lượng</th>
                         <th>Bảo hành</th>
                         <th>Thành tiền</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>NovaCore X15</td>
-                        <td>32.990.000đ</td>
-                        <td>1</td>
-                        <td>Mặc định 24 tháng</td>
-                        <td>32.990.000đ</td>
-                    </tr>
-                    <tr>
-                        <td>Gói bảo hành Premium</td>
-                        <td>3.200.000đ</td>
-                        <td>1</td>
-                        <td>Gia hạn +12 tháng onsite</td>
-                        <td>3.200.000đ</td>
-                    </tr>
-                    <tr>
-                        <td>Kit sửa TV 55"</td>
-                        <td>2.850.000đ</td>
-                        <td>2</td>
-                        <td>Bảo hành linh kiện 12 tháng</td>
-                        <td>5.700.000đ</td>
+                    <tr data-row>
+                        <td class="product">NovaCore X15</td>
+                        <td class="unit-price">32.990.000đ</td>
+                        <td class="qty-cell">
+                            <div class="hello">
+                                <form action="">
+                                    <button class="qty-btn" data-action="decrease">−</button>
+                                    <input class="qty-input" type="number" min="1" value="1" />
+                                    <button class="qty-btn" data-action="increase">+</button>
+                                </form>
+                            </div>
+                        </td>
+                        <td class="warranty">Mặc định 24 tháng Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Libero, recusandae veniam velit harum facere laudantium distinctio molestiae ex vitae
+                            repellat tempore culpa minus rem vero? Culpa temporibus dolor sed sint?</td>
+                        <td class="line-total">32.990.000đ</td>
+                        <td class="remove-cell"><button class="remove-btn" title="Xóa sản phẩm">✕</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -65,5 +66,22 @@
     <footer>
         NovaCare Shop · Thanh toán an toàn với chứng chỉ PCI DSS.
     </footer>
+
+    <!-- Delete confirmation modal -->
+    <div class="confirm-overlay" aria-hidden="true">
+        <div class="confirm-card" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+            <h3 id="confirm-title">Xác nhận xóa sản phẩm</h3>
+            <p>Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng không? Hành động này sẽ không thể hoàn tác.</p>
+            <div class="confirm-actions">
+                <button class="confirm-btn confirm-yes">Xóa</button>
+                <button class="confirm-btn confirm-no">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <input class="qty-input" type="text" value="1" />
+    <script src="js/script.js"></script>
+    <script src="js/cart-qty.js"></script>
 </body>
+
 </html>
