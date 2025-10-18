@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phê duyệt & phân công kỹ thuật - NovaCare Electronics</title>
+    <link rel="stylesheet" href="../css/shop.css">
+    <style>
+        .flow-steps {
+            display: flex;
+            gap: 16px;
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 32px;
+        }
+        .flow-steps li {
+            flex: 1;
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(248, 250, 252, 0.85);
+            border: 1px solid rgba(191, 219, 254, 0.6);
+            text-align: center;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .flow-steps li.active {
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            border-color: rgba(99, 102, 241, 0.45);
+            color: #fff;
+            box-shadow: 0 12px 32px rgba(99, 102, 241, 0.25);
+        }
+        .manager-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 28px;
+        }
+        .approval-card {
+            padding: 28px;
+            border-radius: 24px;
+            background: rgba(248, 250, 252, 0.94);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 12px 34px rgba(79, 70, 229, 0.18);
+            display: grid;
+            gap: 18px;
+        }
+        .approval-card header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+        .approval-card header h2 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: #1e293b;
+        }
+        .tag {
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(59, 130, 246, 0.18);
+            color: #1d4ed8;
+            font-weight: 600;
+        }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+        .detail-item {
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(226, 232, 240, 0.45);
+            color: #0f172a;
+            display: grid;
+            gap: 6px;
+        }
+        .detail-item strong {
+            font-size: 1.05rem;
+        }
+        .assignment-form {
+            display: grid;
+            gap: 16px;
+            padding: 26px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, rgba(165, 243, 252, 0.5), rgba(196, 181, 253, 0.6));
+            border: 1px solid rgba(129, 140, 248, 0.4);
+        }
+        .assignment-form label {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .assignment-form input,
+        .assignment-form select,
+        .assignment-form textarea {
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            background: #fff;
+            font-size: 0.95rem;
+            color: #0f172a;
+        }
+        .assignment-form textarea {
+            min-height: 110px;
+        }
+        .assignment-form button {
+            justify-self: flex-start;
+            padding: 14px 28px;
+            border-radius: 999px;
+            border: none;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            cursor: pointer;
+            box-shadow: 0 12px 28px rgba(99, 102, 241, 0.22);
+        }
+        .timeline {
+            display: grid;
+            gap: 16px;
+        }
+        .timeline-entry {
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(248, 250, 252, 0.92);
+            border: 1px solid rgba(148, 163, 184, 0.35);
+        }
+        .timeline-entry strong {
+            display: block;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+        @media (max-width: 992px) {
+            .manager-grid {
+                grid-template-columns: 1fr;
+            }
+            .approval-card header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body class="shop-page customer-flow manager-approval-page">
+    <header>
+        <h1>Phê duyệt &amp; phân công kỹ thuật</h1>
+        <p>Tech Manager đánh giá thông tin do đội hỗ trợ cung cấp, quyết định phân công kỹ thuật viên và tạo task chi tiết.</p>
+        <nav>
+            <a href="../index.html">Trang chủ</a>
+            <a href="../customer-portal.html">Không gian khách hàng</a>
+            <a href="issue-submit.html">Khách hàng gửi issue</a>
+            <a href="support-intake.html">Hỗ trợ tiếp nhận</a>
+        </nav>
+    </header>
+    <main>
+        <ul class="flow-steps">
+            <li>1. Khách hàng gửi issue</li>
+            <li>2. Hỗ trợ tiếp nhận</li>
+            <li class="active">3. Trình quản lý kỹ thuật</li>
+        </ul>
+        <section class="manager-grid panel">
+            <article class="approval-card">
+                <header>
+                    <h2>ISS-2025-0041 • TV Samsung QLED 55" không lên nguồn</h2>
+                    <span class="tag">Ưu tiên cao</span>
+                </header>
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <strong>Thông tin khách</strong>
+                        <span>Nguyễn Minh Khôi</span>
+                        <span>0909 123 456 • minh.khoi@example.com</span>
+                        <span>Địa chỉ: 102 Nguyễn Thị Thập, Quận 7</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Bảo hành</strong>
+                        <span>Mã thẻ: WR-2025-8831</span>
+                        <span>Ngày hết hạn: 15/07/2026</span>
+                        <span>Tình trạng: Effective</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Tổng quan hỗ trợ</strong>
+                        <span>Đã hướng dẫn reset nguồn nhưng không khắc phục.</span>
+                        <span>Nghi ngờ lỗi board nguồn, cần thay thế.</span>
+                        <span>Khách yêu cầu xử lý trong 48 giờ.</span>
+                    </div>
+                </div>
+                <div class="assignment-form">
+                    <div>
+                        <label for="tech-manager">Quản lý phụ trách</label>
+                        <select id="tech-manager">
+                            <option>Trần Quang Khánh</option>
+                            <option>Phạm Bảo Yến</option>
+                            <option selected>Vũ Hoài Nam</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="tech-staff">Kỹ thuật viên chính</label>
+                        <select id="tech-staff">
+                            <option selected>Huỳnh Phúc Long</option>
+                            <option>Nguyễn Xuân Lộc</option>
+                            <option>Mai Tấn Khoa</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="tech-support">Kỹ thuật viên hỗ trợ</label>
+                        <select id="tech-support">
+                            <option>Đỗ Phương Vy</option>
+                            <option selected>Trịnh Đức Phú</option>
+                            <option>Lê Trần Thiên</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="deadline">Hạn chót hoàn thành</label>
+                        <input id="deadline" type="datetime-local" value="2025-10-20T18:00">
+                    </div>
+                    <div>
+                        <label for="task-instruction">Hướng dẫn &amp; ghi chú công việc</label>
+                        <textarea id="task-instruction" placeholder="Chuẩn bị board nguồn, multimeter, dụng cụ hàn. Kiểm tra nguồn vào 220V, test board mới trước khi lắp. Báo cáo hình ảnh sau khi hoàn tất."></textarea>
+                    </div>
+                    <button type="button">Phê duyệt &amp; tạo task</button>
+                </div>
+            </article>
+            <aside class="timeline">
+                <div class="timeline-entry">
+                    <strong>10:05 • Support xác minh thông tin</strong>
+                    <span>Hoàn tất checklist bảo hành và cập nhật chẩn đoán ban đầu, đề xuất thay board nguồn.</span>
+                </div>
+                <div class="timeline-entry">
+                    <strong>10:15 • Đính kèm tài liệu</strong>
+                    <span>Ảnh cổng nguồn cháy xém, video khách mô tả tiếng bíp khi bật.</span>
+                </div>
+                <div class="timeline-entry">
+                    <strong>10:22 • Chờ phê duyệt</strong>
+                    <span>Vui lòng xem xét mức độ ưu tiên và xác nhận kỹ thuật viên phù hợp.</span>
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>

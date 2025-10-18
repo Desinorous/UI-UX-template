@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiếp nhận yêu cầu khách hàng - NovaCare Electronics</title>
+    <link rel="stylesheet" href="../css/shop.css">
+    <style>
+        .flow-steps {
+            display: flex;
+            gap: 16px;
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 32px;
+        }
+        .flow-steps li {
+            flex: 1;
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(248, 250, 252, 0.85);
+            border: 1px solid rgba(191, 219, 254, 0.6);
+            text-align: center;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .flow-steps li.active {
+            background: linear-gradient(135deg, #34d399, #38bdf8);
+            border-color: rgba(45, 212, 191, 0.4);
+            color: #fff;
+            box-shadow: 0 12px 32px rgba(45, 212, 191, 0.25);
+        }
+        .support-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 28px;
+        }
+        .issue-queue {
+            display: grid;
+            gap: 18px;
+        }
+        .issue-card {
+            display: grid;
+            grid-template-columns: minmax(140px, 1fr) 2fr auto;
+            gap: 16px;
+            align-items: center;
+            padding: 22px;
+            border-radius: 20px;
+            background: rgba(248, 250, 252, 0.92);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            box-shadow: 0 12px 28px rgba(148, 163, 184, 0.16);
+        }
+        .issue-card strong {
+            font-size: 1rem;
+            color: #1e293b;
+        }
+        .issue-card .issue-status {
+            justify-self: flex-start;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-weight: 600;
+            background: rgba(34, 197, 94, 0.15);
+            color: #166534;
+        }
+        .issue-card button {
+            padding: 12px 20px;
+            border-radius: 14px;
+            border: none;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(135deg, #38bdf8, #6366f1);
+            cursor: pointer;
+        }
+        .issue-intake {
+            display: grid;
+            gap: 18px;
+            padding: 26px;
+            border-radius: 22px;
+            background: rgba(248, 250, 252, 0.92);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 12px 30px rgba(99, 102, 241, 0.18);
+        }
+        .issue-intake h2 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: #1e293b;
+        }
+        .issue-intake .field-group {
+            display: grid;
+            gap: 8px;
+        }
+        .issue-intake label {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .issue-intake input,
+        .issue-intake select,
+        .issue-intake textarea {
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            background: #fff;
+            font-size: 0.95rem;
+            color: #0f172a;
+        }
+        .issue-intake textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+        .issue-intake footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .issue-intake footer button {
+            flex: 1;
+            padding: 14px 18px;
+            border-radius: 999px;
+            border: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #fff;
+            cursor: pointer;
+        }
+        .btn-save {
+            background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+        }
+        .btn-forward {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        }
+        .issue-sidepanel {
+            display: grid;
+            gap: 18px;
+        }
+        .side-card {
+            padding: 22px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(167, 243, 208, 0.4), rgba(110, 231, 183, 0.55));
+            border: 1px solid rgba(110, 231, 183, 0.4);
+            color: #0f172a;
+            display: grid;
+            gap: 10px;
+        }
+        .side-card h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #064e3b;
+        }
+        @media (max-width: 992px) {
+            .support-layout {
+                grid-template-columns: 1fr;
+            }
+            .issue-card {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body class="shop-page customer-flow support-intake-page">
+    <header>
+        <h1>Tiếp nhận yêu cầu khách hàng</h1>
+        <p>Đội hỗ trợ xem xét thông tin từ khách hàng, xác minh bảo hành và hoàn tất form chi tiết trước khi chuyển kỹ thuật.</p>
+        <nav>
+            <a href="../index.html">Trang chủ</a>
+            <a href="../customer-portal.html">Không gian khách hàng</a>
+            <a href="issue-submit.html">Khách hàng gửi issue</a>
+            <a href="manager-approval.html">Quản lý kỹ thuật</a>
+        </nav>
+    </header>
+    <main>
+        <ul class="flow-steps">
+            <li>1. Khách hàng gửi issue</li>
+            <li class="active">2. Hỗ trợ tiếp nhận</li>
+            <li>3. Trình quản lý kỹ thuật</li>
+        </ul>
+        <section class="support-layout panel">
+            <div class="issue-queue">
+                <h2>Danh sách yêu cầu mới</h2>
+                <article class="issue-card">
+                    <strong>ISS-2025-0041</strong>
+                    <div>
+                        <div>TV Samsung QLED 55" không lên nguồn • Bảo hành: WR-2025-8831</div>
+                        <small>Khách hàng: Nguyễn Minh Khôi • Gửi lúc: 09:12 18/10/2025</small>
+                    </div>
+                    <span class="issue-status">Chờ xác minh</span>
+                </article>
+                <article class="issue-card">
+                    <strong>ISS-2025-0042</strong>
+                    <div>
+                        <div>Máy lạnh Daikin báo lỗi E1 • Bảo hành: WR-2024-6719</div>
+                        <small>Khách hàng: Lê Phương Anh • Gửi lúc: 10:45 18/10/2025</small>
+                    </div>
+                    <button>Xử lý</button>
+                </article>
+                <article class="issue-card">
+                    <strong>ISS-2025-0043</strong>
+                    <div>
+                        <div>Đề nghị gia hạn bảo hành 2 năm • Thiết bị: Máy giặt LG</div>
+                        <small>Khách hàng: Đặng Quốc Huy • Gửi lúc: 11:20 18/10/2025</small>
+                    </div>
+                    <span class="issue-status">Chờ bổ sung</span>
+                </article>
+            </div>
+            <aside class="issue-sidepanel">
+                <div class="side-card">
+                    <h3>Check-list xác minh</h3>
+                    <span>• Kiểm tra trạng thái bảo hành &amp; serial.</span>
+                    <span>• Liên hệ khách để mô tả rõ triệu chứng.</span>
+                    <span>• Ghi nhận thông tin kỹ thuật đã đề xuất.</span>
+                </div>
+                <div class="side-card">
+                    <h3>Nhật ký xử lý gần nhất</h3>
+                    <span>09:35 • Call khách xác nhận thiết bị đặt tại Quận 7.</span>
+                    <span>09:42 • Hướng dẫn reset nguồn, vẫn không khắc phục.</span>
+                    <span>09:55 • Thu thập hình ảnh cổng HDMI bị cháy.</span>
+                </div>
+            </aside>
+        </section>
+        <section class="issue-intake panel" id="intake-form">
+            <h2>Form tiếp nhận &amp; thông tin khách hàng</h2>
+            <div class="field-group">
+                <label for="customer-name">Họ tên khách hàng</label>
+                <input id="customer-name" type="text" placeholder="Nguyễn Minh Khôi">
+            </div>
+            <div class="field-group">
+                <label for="customer-contact">Số điện thoại / Email</label>
+                <input id="customer-contact" type="text" placeholder="0909 123 456 • minh.khoi@example.com">
+            </div>
+            <div class="field-group">
+                <label for="issue-diagnosis">Chẩn đoán ban đầu của support</label>
+                <textarea id="issue-diagnosis" placeholder="Ghi nhận kết quả kiểm tra từ xa, lỗi nghi vấn, mức độ ưu tiên..."></textarea>
+            </div>
+            <div class="field-group">
+                <label for="required-parts">Linh kiện / vật tư cần chuẩn bị</label>
+                <input id="required-parts" type="text" placeholder="Nguồn TV Model 55Q70A, cáp HDMI dự phòng">
+            </div>
+            <div class="field-group">
+                <label for="site-availability">Thời gian khách cho phép kỹ thuật đến</label>
+                <input id="site-availability" type="text" placeholder="19/10/2025 | 08:00 - 11:00">
+            </div>
+            <div class="field-group">
+                <label for="support-actions">Hành động đã thực hiện</label>
+                <textarea id="support-actions" placeholder="1. Reset nguồn • 2. Cập nhật firmware • 3. Kiểm tra nguồn điện tại nhà khách..."></textarea>
+            </div>
+            <footer>
+                <button class="btn-save" type="button">Lưu thông tin</button>
+                <button class="btn-forward" type="button">Chuyển kỹ thuật</button>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

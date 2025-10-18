@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi yêu cầu hỗ trợ - NovaCare Electronics</title>
+    <link rel="stylesheet" href="../css/shop.css">
+    <style>
+        .flow-steps {
+            display: flex;
+            gap: 16px;
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 32px;
+        }
+        .flow-steps li {
+            flex: 1;
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(248, 250, 252, 0.85);
+            border: 1px solid rgba(191, 219, 254, 0.6);
+            text-align: center;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .flow-steps li.active {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            border-color: rgba(59, 130, 246, 0.4);
+            color: #fff;
+            box-shadow: 0 12px 32px rgba(59, 130, 246, 0.25);
+        }
+        .issue-form {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 28px;
+        }
+        .issue-form form {
+            display: grid;
+            gap: 18px;
+            padding: 28px;
+            border-radius: 22px;
+            background: rgba(248, 250, 252, 0.92);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 12px 30px rgba(148, 163, 184, 0.18);
+        }
+        .issue-form .field-group {
+            display: grid;
+            gap: 8px;
+        }
+        .issue-form label {
+            font-weight: 600;
+            color: #1e293b;
+        }
+        .issue-form input,
+        .issue-form select,
+        .issue-form textarea {
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            background: #fff;
+            font-size: 0.95rem;
+            color: #0f172a;
+        }
+        .issue-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+        .issue-form button {
+            justify-self: flex-start;
+            padding: 14px 28px;
+            border-radius: 999px;
+            border: none;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #fff;
+            cursor: pointer;
+            background: linear-gradient(135deg, #38bdf8, #6366f1);
+            box-shadow: 0 12px 24px rgba(99, 102, 241, 0.25);
+        }
+        .issue-summary {
+            display: grid;
+            gap: 18px;
+        }
+        .summary-card {
+            padding: 22px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(191, 219, 254, 0.45), rgba(221, 214, 254, 0.55));
+            border: 1px solid rgba(129, 140, 248, 0.35);
+            color: #0f172a;
+            display: grid;
+            gap: 10px;
+        }
+        .summary-card h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #312e81;
+        }
+        .summary-card span {
+            font-weight: 500;
+        }
+        footer {
+            margin-top: 42px;
+            padding: 24px;
+            text-align: center;
+            background: rgba(226, 232, 240, 0.45);
+            border-radius: 18px;
+            color: #334155;
+        }
+        @media (max-width: 992px) {
+            .issue-form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="shop-page customer-flow issue-submit-page">
+    <header>
+        <h1>Gửi yêu cầu hỗ trợ</h1>
+        <p>Điền thông tin chi tiết để NovaCare ghi nhận vấn đề của bạn, tạo phiếu bảo hành và kết nối đội ngũ hỗ trợ phù hợp.</p>
+        <nav>
+            <a href="../index.html">Trang chủ</a>
+            <a href="../customer-portal.html">Không gian khách hàng</a>
+            <a href="support-intake.html">Quản trị hỗ trợ</a>
+            <a href="manager-approval.html">Quản lý kỹ thuật</a>
+        </nav>
+    </header>
+    <main>
+        <ul class="flow-steps">
+            <li class="active">1. Khách hàng gửi issue</li>
+            <li>2. Hỗ trợ tiếp nhận</li>
+            <li>3. Trình quản lý kỹ thuật</li>
+        </ul>
+        <section class="issue-form panel">
+            <form>
+                <h2>Thông tin yêu cầu</h2>
+                <div class="field-group">
+                    <label for="issue-title">Tiêu đề vấn đề</label>
+                    <input id="issue-title" type="text" placeholder="Ví dụ: TV Samsung không lên nguồn" required>
+                </div>
+                <div class="field-group">
+                    <label for="issue-type">Loại yêu cầu</label>
+                    <select id="issue-type">
+                        <option value="hardware">Sự cố thiết bị</option>
+                        <option value="warranty">Gia hạn bảo hành</option>
+                        <option value="exchange">Đổi trả sản phẩm</option>
+                        <option value="consulting">Tư vấn sử dụng</option>
+                    </select>
+                </div>
+                <div class="field-group">
+                    <label for="device-category">Danh mục thiết bị</label>
+                    <select id="device-category">
+                        <option>TV &amp; Màn hình</option>
+                        <option>Điều hòa</option>
+                        <option>Máy giặt</option>
+                        <option>Tủ lạnh</option>
+                        <option>Thiết bị khác</option>
+                    </select>
+                </div>
+                <div class="field-group">
+                    <label for="serial-number">Số serial hoặc mã bảo hành</label>
+                    <input id="serial-number" type="text" placeholder="WR-2025-8831">
+                </div>
+                <div class="field-group">
+                    <label for="description">Mô tả chi tiết</label>
+                    <textarea id="description" placeholder="Trình bày triệu chứng, thời điểm xảy ra, các thao tác đã thử..."></textarea>
+                </div>
+                <div class="field-group">
+                    <label for="preferred-time">Thời gian liên hệ thuận tiện</label>
+                    <input id="preferred-time" type="text" placeholder="Sau 18:00, thứ 2 - thứ 6">
+                </div>
+                <div class="field-group">
+                    <label for="contact-channel">Kênh phản hồi ưu tiên</label>
+                    <select id="contact-channel">
+                        <option value="phone">Điện thoại</option>
+                        <option value="email">Email</option>
+                        <option value="zalo">Zalo</option>
+                    </select>
+                </div>
+                <div class="field-group">
+                    <label for="attachments">Tệp đính kèm</label>
+                    <input id="attachments" type="file" multiple>
+                </div>
+                <button type="submit">Gửi yêu cầu</button>
+            </form>
+            <aside class="issue-summary">
+                <div class="summary-card">
+                    <h3>Hướng dẫn nhanh</h3>
+                    <span>• Chuẩn bị ảnh hoặc video mô tả lỗi rõ ràng.</span>
+                    <span>• Cập nhật thông tin serial để xác thực bảo hành.</span>
+                    <span>• NovaCare sẽ phản hồi trong vòng 2 giờ làm việc.</span>
+                </div>
+                <div class="summary-card">
+                    <h3>Bảo hành liên quan</h3>
+                    <span>Mã thẻ: WR-2025-8831</span>
+                    <span>Hết hạn: 15/07/2026</span>
+                    <span>Tình trạng: Đang kiểm tra kỹ thuật.</span>
+                </div>
+                <div class="summary-card">
+                    <h3>Liên hệ hỗ trợ</h3>
+                    <span>Hotline: 1900 8888 (24/7)</span>
+                    <span>Email: support@novacare.vn</span>
+                    <span>Địa chỉ: NovaCare Center, Quận 1, TP.HCM</span>
+                </div>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        Sau khi gửi, mã issue sẽ được tạo tự động và nhân viên hỗ trợ sẽ tiếp nhận để xác minh thông tin của bạn.
+    </footer>
+</body>
+</html>
